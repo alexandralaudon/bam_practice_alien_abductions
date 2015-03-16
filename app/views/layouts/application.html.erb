@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<% if notice %>
+  <%= flash[:notice] %>
+<% end %>
+
+
+
 <%= yield %>
 
 </body>

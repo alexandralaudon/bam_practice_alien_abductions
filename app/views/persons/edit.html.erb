@@ -1,0 +1,17 @@
+<h1>Edit Persons Page</h1>
+
+
+<%= form_for @person, url:person_path do |f| %>
+
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+
+  <%= f.label :occupation %>
+  <%= f.text_field :occupation %>
+
+  <%= f.submit "Update Person" %>
+
+<% end %>

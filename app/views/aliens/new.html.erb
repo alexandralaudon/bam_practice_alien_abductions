@@ -1,0 +1,13 @@
+<h1>Add New Alien</h1>
+
+<%= form_for @alien do |f| %>
+
+  <%= f.label :species %>
+  <%= f.text_field :species %>
+
+  <%= f.label :planet %>
+  <%= f.text_field :planet %>
+
+  <%= f.submit "Create Alien" %>
+
+<% end %>

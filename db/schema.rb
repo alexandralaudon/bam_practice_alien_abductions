@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150316000608) do
+ActiveRecord::Schema.define(version: 20150316010150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "abductions", force: :cascade do |t|
+    t.integer  "alien_id"
+    t.integer  "person_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "date"
+    t.boolean  "anal_probe"
+  end
 
   create_table "aliens", force: :cascade do |t|
     t.string   "species"

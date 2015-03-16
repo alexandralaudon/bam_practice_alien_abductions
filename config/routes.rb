@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resources :aliens
+  resources :aliens do
+    resources :abductions
+  end
   resources :persons
 
   # Example of regular route:

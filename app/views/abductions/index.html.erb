@@ -1,0 +1,11 @@
+<h1><%= "List of Abductions by #{@alien.species}" %></h1>
+
+
+<% @abductions.each do |abduction| %>
+  <%= link_to "#{abduction.person.full_name} on #{abduction.date.strftime("%m/%d/%Y")} with ", alien_abduction_path(@alien, abduction) %>
+  <%= "no" if !abduction.anal_probe  %>
+  <%= "butt stuff" %>
+<% end %>
+
+<%= link_to "Back", alien_path(@alien) %>
+<%= link_to "New Abduction", new_alien_abduction_path(@alien) %>
